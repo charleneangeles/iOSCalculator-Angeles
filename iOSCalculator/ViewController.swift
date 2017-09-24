@@ -7,8 +7,19 @@
 //
 
 import UIKit
+enum modes{
+    case not_set
+    case addition
+    case subtraction
+    
+}
 
 class ViewController: UIViewController {
+    
+    var results:String = "0"
+    var currentMode:modes = .not_set// using the shorthand approach
+    var savedNum:Int = 0
+    var lastButtonWasMode:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
